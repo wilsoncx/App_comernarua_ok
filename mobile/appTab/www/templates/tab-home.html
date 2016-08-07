@@ -1,0 +1,24 @@
+<ion-view view-title="Mate a fome">
+  <ion-content class="padding">
+      <ion-list class="list ">
+        <ion-item>
+           <p><b>Locais perto de:</b>
+              {{locaAtual}}
+           </p>
+        </ion-item>
+      </ion-list>
+
+      <ion-list class="list-custom" >
+        <ion-item class="item item-thumbnail-left" ng-repeat="d in dados" href="#/tab/local/{{d.id}}"}>
+            <img src={{d.imagem}}>
+
+            <h2>{{d.nome}}</h2>
+            <p>{{d.categoria}}</p>
+            <p><b>Valor:</b> R$: {{d.valor}}</p>
+            <div class="item-icon-right"><i class="icon ion-ios-star"><h2>4.0</h2></i></div>
+            <p><i class="icon ion-location"> {{d.distancia}} Km</i></p>
+            </ion-item>
+     </ion-list>
+  </ion-content>
+
+</ion-view>
